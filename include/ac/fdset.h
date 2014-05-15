@@ -22,6 +22,10 @@
 #ifndef _AC_FDSET_H
 #define _AC_FDSET_H
 
+#if (defined(__BIONIC__) || defined(ANDROID)) && !defined( FD_SETSIZE ) && !defined(_LINUX_TIME_H)
+# include <time.h>
+#endif
+
 #if !defined( OPENLDAP_FD_SETSIZE ) && !defined( FD_SETSIZE )
 #  define OPENLDAP_FD_SETSIZE 4096
 #endif

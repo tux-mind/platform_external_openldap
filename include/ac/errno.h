@@ -23,6 +23,10 @@
 # include <sys/errno.h>
 #endif
 
+#if defined(__BIONIC__) && !defined(_STDIO_H_)
+# include <stdio.h>
+#endif
+
 #ifndef HAVE_SYS_ERRLIST
 	/* no sys_errlist */
 #	define		sys_nerr	0
