@@ -47,6 +47,11 @@
 #include <ssl.h>
 #endif
 
+#if defined(ANDROID) || defined(__BIONIC__)
+#include <openssl/bn.h>
+#include <openssl/rsa.h>
+#endif
+
 typedef SSL_CTX tlso_ctx;
 typedef SSL tlso_session;
 

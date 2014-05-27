@@ -3,6 +3,7 @@ LOCAL_PATH := $(call my-dir)
 #original path: libraries/liblutil/liblutil.a
 include $(CLEAR_VARS)
 
+LOCAL_CFLAGS:= -DOPENSSL_NO_DEPRECATED
 
 # fixed flags
 LOCAL_CFLAGS+= -ffunction-sections -fdata-sections
@@ -43,7 +44,7 @@ include $(BUILD_STATIC_LIBRARY)
 #original path: libraries/liblber/.libs/liblber.a
 include $(CLEAR_VARS)
 
-LOCAL_CFLAGS:= -DLBER_LIBRARY 
+LOCAL_CFLAGS:= -DLBER_LIBRARY -DOPENSSL_NO_DEPRECATED
 
 # fixed flags
 LOCAL_CFLAGS+= -ffunction-sections -fdata-sections
@@ -73,6 +74,7 @@ include $(BUILD_STATIC_LIBRARY)
 #original path: libraries/liblunicode/liblunicode.a
 include $(CLEAR_VARS)
 
+LOCAL_CFLAGS:= -DOPENSSL_NO_DEPRECATED
 
 # fixed flags
 LOCAL_CFLAGS+= -ffunction-sections -fdata-sections
@@ -97,7 +99,7 @@ include $(BUILD_STATIC_LIBRARY)
 #original path: libraries/libldap/.libs/libldap.a
 include $(CLEAR_VARS)
 
-LOCAL_CFLAGS:= -DLDAP_LIBRARY 
+LOCAL_CFLAGS:= -DLDAP_LIBRARY -DOPENSSL_NO_DEPRECATED
 
 # fixed flags
 LOCAL_CFLAGS+= -ffunction-sections -fdata-sections
@@ -181,7 +183,7 @@ include $(BUILD_STATIC_LIBRARY)
 #original path: libraries/libldap_r/.libs/libldap_r.a
 include $(CLEAR_VARS)
 
-LOCAL_CFLAGS:= -DLDAP_R_COMPILE -DLDAP_LIBRARY 
+LOCAL_CFLAGS:= -DLDAP_R_COMPILE -DLDAP_LIBRARY -DOPENSSL_NO_DEPRECATED
 
 # fixed flags
 LOCAL_CFLAGS+= -ffunction-sections -fdata-sections
@@ -278,6 +280,7 @@ include $(BUILD_STATIC_LIBRARY)
 #original path: libraries/librewrite/librewrite.a
 include $(CLEAR_VARS)
 
+LOCAL_CFLAGS:= -DOPENSSL_NO_DEPRECATED
 
 # fixed flags
 LOCAL_CFLAGS+= -ffunction-sections -fdata-sections
